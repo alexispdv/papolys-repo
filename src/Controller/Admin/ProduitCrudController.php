@@ -30,8 +30,8 @@ class ProduitCrudController extends AbstractCrudController
             TextEditorField::new('description')->onlyOnForms(),
             DateTimeField::new('date_enregistrement')->setFormat('d/M/Y à H:m:s')->hideOnForm(),
             ChoiceField::new('couleur')->setChoices(['rouge'=>"rouge", "bleu"=>"bleu", "blanc"=>"blanc", "jaune"=>"jaune"]),
-            ChoiceField::new('taille')->setChoices(['S'=> "S", "M"=>"M", "L" => "L", "XL"=>"XL"]),
-            ChoiceField::new('collection')->setChoices(['H'=>'homme', "F"=>"femme", "E" => "enfant"]),
+            ChoiceField::new('taille')->setChoices(['Parebrise '=> "Parebrise", "Fenetre"=>"Fenetre "]),
+            ChoiceField::new('collection')->setChoices(['1'=>'homme', "2"=>"femme", "3" => "enfant"]),
             ImageField::new('photo')->setUploadDir('public/uploads/images/')->setUploadedFileNamePattern('[timestamp]-[slug]-[contenthash].[extension]')->onlyWhenUpdating()->setFormTypeOptions([
                 'required' => false, // Rendre le champ non requis lors de la mise à jour
             ]),
